@@ -49,6 +49,7 @@ function updateThumbnail(dropZoneElement, file) {
     thumbnailElement = document.createElement("div");
     thumbnailElement.classList.add("drop-zone__thumb");
     dropZoneElement.appendChild(thumbnailElement);
+    document.getElementsByClassName("header")[0].style.display = "block";
   }
 
   thumbnailElement.dataset.label = file.name;
@@ -65,60 +66,3 @@ function updateThumbnail(dropZoneElement, file) {
     thumbnailElement.style.backgroundImage = null;
   }
 }
-
-
-//button display slider con datos 
-function showSlider() {
-  document.getElementById('slider').style.display = "block";
-}
-
-
-//slider 
-let slider = document.getElementById("myRange");
-let output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-
-//slider function
-
-getData()
-
-      async function getData() {
-       const response = await fetch('text.csv');
-        const data = await response.text();
-
-        const table = data.split('\n').slice(1);
-        table.forEach(row => {
-          const cols = row.split(',');
-          const year = cols[0]
-          const temp = cols[1]
-          console.log(year, temp)
-        });
-      }
-//chart
-window.addEventListener('load', setup);
-
-      async function setup() {
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const seaLevel = await getData();
-        const myChart = new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: seaLevel.years,
-            datasets: [
-              {
-                label: 'Sea Level',
-                data: seaLevel.meters,
-                fill: false,
-                borderColor: 'rgba(255, 99, 132, 1)',
-                backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                borderWidth: 1
-              }
-            ]
-          },
-          options: {}
-        });
-      }

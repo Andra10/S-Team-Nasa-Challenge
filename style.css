@@ -9,39 +9,96 @@
 }
 
 body {
-    font-family: "Mukta", sans-serif;
-    font-size: 1rem;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #f3f8fa;
-  }
+  font-family: "Mukta", sans-serif;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f3f8fa;
+}
 
   
 
-  .child {
-    width: 200%;
-  margin: 0 auto;
-  }
-  /*drop-zone-container */
+/* wave */ 
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+
+.header {
+  display: none;
+  position: absolute;
+  text-align:center;
+  color:white;
+  top: 295px;
+left: 15px;
+width: 588px;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height:67vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:50vh; 
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:60vh;
+  text-align:center;
+  background-color: rgb(179, 232, 255);
+}
+
+
 
 .drop-zone {
-  position: center;
-  max-width: 300px;
-  height: 300px;
-  padding: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  cursor: pointer;
-  color: #cccccc;
-  border: 4px;
-  border-radius: 10px;
-  box-shadow: 2px 3px 3px 2px grey;
+position: relative;
+width: 600px;
+padding: 15px;
+height: 400px;
+margin-top: 250px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-family: "Quicksand", sans-serif;
+font-weight: 500;
+font-size: 20px;
+cursor: pointer;
+color: #cccccc;
+border: 4px;
+border-radius: 10px;
+box-shadow: 2px 3px 3px 2px grey;
 }
 
 .drop-zone--over {
@@ -80,23 +137,89 @@ span {
   font-weight: 300;
 }
 span:hover {
-  color: #646464;
+  color: #525252;
 }
-/*button */
+*/
 
-.btn {
-  padding: 25px 20px;
-  color: white;
-  background-color: rgb(125, 67, 240);
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "Mukta", sans-serif;
-  font-weight: 300;
-  margin: 70px 100px ;
-  border: 1px none;
-}
-.btn:hover {
-  background-color: rgb(147, 104, 235);
+
+/*drop-zone-container */
+
+
+.drop-zone--over {
+border-style: solid;
 }
 
-/* slider */
+.drop-zone__input {
+display: none;
+cursor: pointer;
+}
+
+.drop-zone__thumb {
+width: 100%;
+height: 100%;
+border-radius: 10px;
+overflow: hidden;
+background-color: #cccccc;
+background-size: cover;
+position: relative;
+}
+
+.drop-zone__thumb::after {
+content: attr(data-label);
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 5px 0;
+color: #ffffff;
+background: rgba(0, 0, 0, 0.75);
+font-size: 14px;
+text-align: center;
+}
+
+.parallax > use {
+  animation: move-forever 50s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  
+}  
+
+
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}

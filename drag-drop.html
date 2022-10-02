@@ -6,33 +6,104 @@
   <meta charset="utf-8" />
   <link rel="shortcut icon" href="/assets/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 
 <body>
-  <div class="parent">
-    <div class="child">
-      <div class="container">
-        <div class="drop-zone">
-          <span class="drop-zone__prompt"
-            >Drop file here or <br />
-            click to upload</span
-          >
-          <input type="file" name="myFile" class="drop-zone__input" />
-        </div>
-        <button id="myButton" class="btn" onclick="('slider')">Learn More</button>
-        </div>
-        <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <p>Value: <span id="demo"></span></p>
-          <p>Year:</p>
-          <h1>Sea Level Trends: 1927-2022</h1>
-    <canvas id="myChart" width="400" height="200"></canvas>
-        </div>
-      </div>
-    </div>
+  <h1>Sea Level Trends: 1927-2022</h1>
+  <div class="selectText">
+    <h3>Select One Year</h3>
+
+    <button 
+    id="btn" 
+    onClick="document.getElementById('aa').innerHTML = '-0.286' "> 1927</button>
+
+    <button 
+    id="btn" 
+    onClick="document.getElementById('aa').innerHTML = '-0.229' "> 1940</button>
+
+    <button 
+    id="btn" 
+    onClick="document.getElementById('aa').innerHTML = '-0.179' "> 1950</button>
+
+    <button 
+    id="btn" 
+    onClick="document.getElementById('aa').innerHTML = '-0.090' "> 1970</button>
+
+    <button 
+    id="btn" 
+    onClick="document.getElementById('aa').innerHTML = '-0.043' "> 1980</button>
+
+    <button 
+    id="btn" 
+    onClick="document.getElementById('aa').innerHTML = '0.005' "> 1990</button>
+
+    <button 
+    id="btn" 
+    onClick="document.getElementById('aa').innerHTML = '0.103' "> 2010</button>
+
+    <button 
+    id="btn" 
+    onClick="document.getElementById('aa').innerHTML = '0.162' "> 2022</button>
+
+
+
+  
+
   </div>
-  <script src="script.js"> </script>
- 
+<p id="poll"></p>
+  <h3 > Sea Level:
+      <p id="aa"></p>
+    </h3>
+  <h3 id="bb"></h3>
+
+  </div>
+
+  <!--Implement Anime js element-->
+
+
+  <div class="drop-zone">
+    <span class="drop-zone__prompt"
+      >Drop file here or <br />
+      click to upload</span
+    >
+    <input type="file" name="myFile" class="drop-zone__input" />
+  </div>
+
+<div class="header">
+
+  <!--Content before waves-->
+  <div class="inner-header flex">
+  <!--Just the logo.. Don't mind this-->
+  <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
+
+  </svg>
+  </div>
+  
+  <!--Waves Container-->
+  
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(65,105,225,0.1)" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(65,105,225,0.5)" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(65,105,225,0.3)" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(65,105,225,0.3)" />
+  </g>
+  </svg>
+  </div>
+  <!--Waves end-->
+  
+  </div>
+  <!--Header ends-->
+
+
+  
+<script src="script.js"> </script>
+
+
 
 </body>
