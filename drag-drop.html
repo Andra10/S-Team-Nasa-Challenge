@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Drag and Drop File Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child">
+      <div class="container">
+        <div class="drop-zone">
+          <span class="drop-zone__prompt"
+            >Drop file here or <br />
+            click to upload</span
+          >
+          <input type="file" name="myFile" class="drop-zone__input" />
+        </div>
+        <button id="myButton" class="btn" onclick="('slider')">Learn More</button>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <p>Value: <span id="demo"></span></p>
+          <p>Year:</p>
+          <h1>Sea Level Trends: 1927-2022</h1>
+    <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"> </script>
+ 
+
+</body>
