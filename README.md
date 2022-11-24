@@ -1,5 +1,6 @@
 # S-Team-Nasa-Challenge
 Turning STEM into STEAM Nasa Space App Challenge [Barcelona](https://2022.spaceappschallenge.org/locations/barcelona/welcome) 
+<img src="/images/nasa-space-apps.png" width="200">
 
 # Name of the app
 
@@ -16,9 +17,9 @@ Download the repository in your local machine
 
 # Preview Mockup
 
-![alt text](/images/image1.png)
-![alt text](/images/image2.png)
-![alt text](/images/image3.png)
+<img src="/images/image1.png" width="300">
+<img src="/images/image2.png" width="300">
+<img src="/images/image3.png" width="300">
 
 # Live Prototype
 https://www.figma.com/proto/Bnm9Rl8txazDHYtKSmNEsu/Untitled?node-id=95%3A41&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=95%3A41
