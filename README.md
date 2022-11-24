@@ -1,5 +1,5 @@
 # S-Team-Nasa-Challenge
-Turning STEM into STEAM Nasa Space App Challenge [Barcelona] (https://2022.spaceappschallenge.org/locations/barcelona/welcome) 
+Turning STEM into STEAM Nasa Space App Challenge [Barcelona](https://2022.spaceappschallenge.org/locations/barcelona/welcome) 
 
 # Name of the app
 
